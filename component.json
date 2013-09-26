@@ -4,7 +4,7 @@
   "repo": "leecrossley/isNumeric",
   "description": "Determine if a JavaScript object is numeric",
   "homepage": "http://ilee.co.uk",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "keywords": [
     "isnumeric",
     "numeric",

@@ -2,4 +2,64 @@
 
 Determine if a JavaScript object is numeric.
 
-WIP.
+### Using npm
+
+```
+npm install isnumeric
+```
+
+To then include isnumeric in your node app:
+
+```
+var isNumeric = require("isnumeric);
+```
+
+### Direct dependency
+
+Download the minified version [here](http://bit.ly/isnumeric), reference the js file and isNumeric will become a global variable.
+
+
+## Truthy test cases
+
+### Integers
+
+```javascript
+expect(isNumeric(1)).toBeTruthy();
+expect(isNumeric(-1)).toBeTruthy();
+expect(isNumeric(0)).toBeTruthy();
+expect(isNumeric("1")).toBeTruthy();
+expect(isNumeric("-1")).toBeTruthy();
+expect(isNumeric("0")).toBeTruthy();
+```
+
+### Octals
+
+```javascript
+expect(isNumeric(0144)).toBeTruthy();
+expect(isNumeric("0144")).toBeTruthy();
+```
+
+### Hexadecimals
+
+```javascript
+expect(isNumeric(0xFF)).toBeTruthy();
+expect(isNumeric("0xFF")).toBeTruthy();
+```
+
+### Floating-points
+
+```javascript
+expect(isNumeric(1.1)).toBeTruthy();
+expect(isNumeric(-1.1)).toBeTruthy();
+expect(isNumeric("1.1")).toBeTruthy();
+expect(isNumeric("-1.1")).toBeTruthy();
+```
+
+### Exponentials
+
+```javascript
+expect(isNumeric(3e5)).toBeTruthy();
+expect(isNumeric(123e-2)).toBeTruthy();
+expect(isNumeric("3e5")).toBeTruthy();
+expect(isNumeric("123e-2")).toBeTruthy();
+```
