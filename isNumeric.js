@@ -1,4 +1,5 @@
 var isNumeric = function (obj) {
+    obj = typeof(obj) === "string" ? obj.replace(",", ".") : obj;
     return !isNaN(parseFloat(obj)) && isFinite(obj) && Object.prototype.toString.call(obj).toLowerCase() !== "[object array]";
 };
 

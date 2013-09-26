@@ -11,6 +11,12 @@ describe("isNumeric", function() {
         expect(isNumeric("1")).toBeTruthy();
         expect(isNumeric("-1")).toBeTruthy();
         expect(isNumeric("0")).toBeTruthy();
+        expect(isNumeric("1.")).toBeTruthy();
+    });
+
+    it("should return true for min / max numbers", function() {
+        expect(isNumeric(Number.MAX_VALUE)).toBeTruthy();
+        expect(isNumeric(Number.MIN_VALUE)).toBeTruthy();
     });
 
     it("should return true for octals", function() {
@@ -25,9 +31,14 @@ describe("isNumeric", function() {
 
     it("should return true for floating-points", function() {
         expect(isNumeric(1.1)).toBeTruthy();
+        expect(isNumeric(0.1)).toBeTruthy();
         expect(isNumeric(-1.1)).toBeTruthy();
+        expect(isNumeric(-0.1)).toBeTruthy();
         expect(isNumeric("1.1")).toBeTruthy();
+        expect(isNumeric("0.1")).toBeTruthy();
         expect(isNumeric("-1.1")).toBeTruthy();
+        expect(isNumeric("-0.1")).toBeTruthy();
+        expect(isNumeric(".1")).toBeTruthy();
     });
 
     it("should return true for exponentials", function() {
@@ -37,12 +48,19 @@ describe("isNumeric", function() {
         expect(isNumeric("123e-2")).toBeTruthy();
     });
 
+    it("should return true with decimal commas", function() {
+        expect(isNumeric(1,1)).toBeTruthy();
+        expect(isNumeric("1,1")).toBeTruthy();
+    });
+
     it("should return false for empty / whitespace", function() {
         expect(isNumeric()).toBeFalsy();
         expect(isNumeric("")).toBeFalsy();
         expect(isNumeric("    ")).toBeFalsy();
         expect(isNumeric("  ")).toBeFalsy();
         expect(isNumeric("\t")).toBeFalsy();
+        expect(isNumeric("\n")).toBeFalsy();
+        expect(isNumeric("\r")).toBeFalsy();
     });
 
     it("should return false for strings that aren't numeric", function() {
@@ -52,6 +70,11 @@ describe("isNumeric", function() {
         expect(isNumeric("abc123")).toBeFalsy();
         expect(isNumeric("123ABC")).toBeFalsy();
         expect(isNumeric("123abc")).toBeFalsy();
+    });
+
+    it("should return false for multiple decimals", function() {
+        expect(isNumeric("1.1.1")).toBeFalsy();
+        expect(isNumeric("1,1,1")).toBeFalsy();
     });
 
     it("should return false for booleans", function() {

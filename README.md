@@ -30,6 +30,14 @@ expect(isNumeric(0)).toBeTruthy();
 expect(isNumeric("1")).toBeTruthy();
 expect(isNumeric("-1")).toBeTruthy();
 expect(isNumeric("0")).toBeTruthy();
+expect(isNumeric("1.")).toBeTruthy();
+```
+
+### Max / min numbers
+
+```javascript
+expect(isNumeric(Number.MAX_VALUE)).toBeTruthy();
+expect(isNumeric(Number.MIN_VALUE)).toBeTruthy();
 ```
 
 ### Octals
@@ -50,9 +58,14 @@ expect(isNumeric("0xFF")).toBeTruthy();
 
 ```javascript
 expect(isNumeric(1.1)).toBeTruthy();
+expect(isNumeric(0.1)).toBeTruthy();
 expect(isNumeric(-1.1)).toBeTruthy();
+expect(isNumeric(-0.1)).toBeTruthy();
 expect(isNumeric("1.1")).toBeTruthy();
+expect(isNumeric("0.1")).toBeTruthy();
 expect(isNumeric("-1.1")).toBeTruthy();
+expect(isNumeric("-0.1")).toBeTruthy();
+expect(isNumeric(".1")).toBeTruthy();
 ```
 
 ### Exponentials
@@ -62,4 +75,11 @@ expect(isNumeric(3e5)).toBeTruthy();
 expect(isNumeric(123e-2)).toBeTruthy();
 expect(isNumeric("3e5")).toBeTruthy();
 expect(isNumeric("123e-2")).toBeTruthy();
+```
+
+### Decimal commas
+
+```javascript
+expect(isNumeric(1,1)).toBeTruthy();
+expect(isNumeric("1,1")).toBeTruthy();
 ```
