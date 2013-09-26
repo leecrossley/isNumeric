@@ -1,5 +1,5 @@
 {
-  "name": "isNumeric",
+  "name": "isnumeric",
   "author": "Lee Crossley <leee@hotmail.co.uk> (http://ilee.co.uk/)",
   "repo": "leecrossley/isNumeric",
   "description": "Determine if a JavaScript object is numeric",
