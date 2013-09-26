@@ -11,7 +11,7 @@ npm install isnumeric
 To then include isnumeric in your node app:
 
 ```
-var isNumeric = require("isnumeric);
+var isNumeric = require("isnumeric");
 ```
 
 ### Direct dependency
