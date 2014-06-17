@@ -3,7 +3,7 @@
   "author": "Lee Crossley <leee@hotmail.co.uk> (http://ilee.co.uk/)",
   "description": "Determine if a JavaScript object is numeric",
   "homepage": "http://ilee.co.uk",
-  "version": "0.0.10",
+  "version": "0.1.1",
   "main": "isNumeric.min.js",
   "keywords": [
     "isnumeric",
@@ -21,12 +21,11 @@
     "node": ">= 0.8.x"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-shell": "~0.6.x",
-    "grunt-contrib-watch": "~0.5.x",
-    "grunt-contrib-jshint": "~0.8.x",
+    "grunt": "~0.4.x",
+    "grunt-cli": "~0.1.x",
+    "grunt-contrib-watch": "~0.6.x",
+    "grunt-contrib-jshint": "~0.10.x",
     "grunt-contrib-jasmine": "~0.6.x",
-    "grunt-contrib-uglify": "~0.3.x",
-    "grunt-cli": "~0.1.x"
+    "grunt-contrib-uglify": "~0.5.x"
   }
 }
