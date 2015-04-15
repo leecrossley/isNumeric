@@ -53,6 +53,11 @@ describe("isNumeric", function() {
         expect(isNumeric("1,1")).toBeTruthy();
     });
 
+    it("should return true for multiple commas", function() {
+        expect(isNumeric("1,1,1")).toBeTruthy();
+        expect(isNumeric("1,1,1,1")).toBeTruthy();
+    });
+
     it("should return false for empty / whitespace", function() {
         expect(isNumeric()).toBeFalsy();
         expect(isNumeric("")).toBeFalsy();
@@ -74,7 +79,7 @@ describe("isNumeric", function() {
 
     it("should return false for multiple decimals", function() {
         expect(isNumeric("1.1.1")).toBeFalsy();
-        expect(isNumeric("1,1,1")).toBeFalsy();
+        expect(isNumeric("1.1.1.1")).toBeFalsy();
     });
 
     it("should return false for booleans", function() {
