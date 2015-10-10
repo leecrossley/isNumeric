@@ -3,7 +3,7 @@
   "author": "Lee Crossley <leee@hotmail.co.uk> (http://ilee.co.uk/)",
   "description": "Determine if a JavaScript object is numeric",
   "homepage": "http://ilee.co.uk",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "main": "isNumeric.min.js",
   "keywords": [
     "isnumeric",
@@ -25,9 +25,7 @@
     "gulp-jasmine": "^2.1.0",
     "gulp-jshint": "^1.11.2",
     "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^1.4.1"
-  },
-  "dependencies": {
+    "gulp-uglify": "^1.4.1",
     "gulp-header": "^1.7.1"
   }
 }
